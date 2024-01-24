@@ -1,0 +1,142 @@
+.h2s{margin-left: 20px; padding: 20px;}
+.skill-parent{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+.skill{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border: 2px solid #862a2a;
+    border-radius: 50%;
+}
+.skill .icon{
+    position: relative; 
+    left:-50%; /* this is important  */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.skill .icon .imgBx{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid #fff;
+    box-shadow: 0 0 0 4px #222, 0 0 0 6px #fff;
+    transform: rotate(calc(360deg/6 *var(--i))); 
+    
+    transform-origin: 340px ; /*this is important */
+   
+    z-index: 100;
+    overflow: hidden;
+}    
+.skill .icon .imgBx.active{
+    box-shadow: 0 0 0 4px #222, 0 0 0 12px #ff1d50;
+    
+}
+.skill .icon .imgBx img{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: rotate(calc(-360deg/6 *var(--i))); 
+    transition: 0.5s;
+    /* filter: grayscale(1); */
+   
+}
+/* .skill .icon .imgBx.active img{
+    filter: grayscale(0);
+    
+} */
+.content{
+    position: absolute;
+    inset:0;
+    overflow: hidden;
+}
+.content::before{
+    content: "";
+    position: absolute;
+    inset: 60px;
+    border: 4px solid transparent;
+    border-left: 4px solid #2196f3;
+    border-right: 4px solid #fff;
+    border-radius: 50%;
+    animation: animate_01 5s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.content::after{
+    content: "";
+    position: absolute;
+    inset: 120px;
+    border: 4px solid transparent;
+    border-left: 4px solid #d3290f;
+    border-right: 4px solid #fff;
+    border-radius: 50%;
+    animation: animate_02 2.5s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+@keyframes animate_01 {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+@keyframes animate_02 {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: -360deg;
+    }
+}
+
+.card2{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: calc(50% - 100px);
+    left: calc(50% - 90px);
+    width: 30%;
+}
+.card2 .imgBx{
+    display: flex;
+    justify-content: center;
+
+}
+
+.card2 .imgBx img{
+    border-radius: 50%;
+    
+}
+.card2 .textBx {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textBx h2, h3{ 
+    align-self: center;
+   
+}
