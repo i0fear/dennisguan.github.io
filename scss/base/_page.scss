@@ -326,40 +326,46 @@ footer{
         cursor: pointer;
     }
     // SKILL SECTION BEGIN
-    .skill{
-        width: 80vw;
-        height: 80vw;
-    }
-    .content::before{
-        inset: calc(80vw - 30px)
-    }
-    .content::after{
-        inset: calc(80vw - 30px)
+    // .skill{
+    //     display: none;
+    //     width: 80vw;
+    //     height: 80vw;
+    // }
+    // .content::before{
+    //     display: none;
+    //     inset: calc(80vw - 30px)
+    // }
+    // .content::after{
+    //     display: none;
+    //     inset: calc(80vw - 30px)
 
-    }
-    .skill .icon .imgBx{
-        position: absolute;
-        left: 45%;
-        width: calc(20 / 100 *80vw);
-        height: calc(20/ 100 *80vw);
-        transform: rotate(calc(360deg/6 *var(--i))); 
-        transform-origin: 45vw; /* Adjusted transform-origin */
+    // }
+    // .skill .icon .imgBx{
+    //     display: none;
+    //     position: absolute;
+    //     left: 45%;
+    //     width: calc(20 / 100 *80vw);
+    //     height: calc(20/ 100 *80vw);
+    //     transform: rotate(calc(360deg/6 *var(--i))); 
+    //     transform-origin: 45vw; 
       
-    }
+    // }
     
-    .card2, .textBx{
-        left: calc(80vw *0.5 - 15%);
+    // .card2, .textBx{
+    //     left: calc(80vw *0.5 - 15%);
        
-    }
-    .card2 img{
-        width:70%;
-        height: 70%;
-    }
-    .textBx h3{
-       padding-left: 20px;
-    }
+    // }
+    // .card2 img{
+    //     width:70%;
+    //     height: 70%;
+    // }
+    // .textBx h3{
+    //    padding-left: 20px;
+    // }
     
 }
+
+
 
     
     
